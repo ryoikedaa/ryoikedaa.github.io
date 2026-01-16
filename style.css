@@ -138,14 +138,11 @@ nav {
 }
 
 .experience-item {
-  border: 2px solid black;
-  border-left: 4px solid goldenrod; 
-  border-radius: 6px;
-  padding: 18px 20px;
-  margin-bottom: 18px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: none;          /* remove border */
+  box-shadow: none;      /* remove any shadow */
+  background: none;      /* remove background box */
+  padding: 0;            /* optional: tighten spacing */
 }
-
 
 .experience-item h3 {
   font-size: 20px;
