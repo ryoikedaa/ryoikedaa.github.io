@@ -206,6 +206,7 @@
         <a href="#about">about</a>
         <a href="#experience">experience</a>
         <a href="#projects">projects</a>
+        <a href="#writings">writings</a>
     </nav>
 
     <header>
@@ -392,6 +393,12 @@
         </div>
     </section>
 
+    <!-- WRITINGS -->
+    <section data-tab="writings" class="section">
+        <div class="section-label">writings</div>
+        <p>Still yet to jot thoughts down.</p>
+    </section>
+
     <footer>
         <a href="mailto:ryoikeda@umich.edu">ryoikeda@umich.edu</a> · 
         <a href="https://linkedin.com/in/ryoikedaa" target="_blank">linkedin</a> · 
@@ -412,7 +419,7 @@
 
         typeName();
 
-        const tabs = ["about", "experience", "projects"];
+        const tabs = ["about", "experience", "projects", "writings"];
         function showTab() {
             const hash = location.hash.slice(1);
             const tab = tabs.includes(hash) ? hash : "about";
