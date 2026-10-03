@@ -38,6 +38,11 @@
 
         nav a:hover { color: #888; }
 
+        nav a.active {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         header { margin-bottom: 40px; }
 
         header h1 {
@@ -205,11 +210,9 @@
 <body>
 
     <nav>
-        <a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">about</a>
-        <a onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">experience</a>
-        <a onclick="document.getElementById('education').scrollIntoView({behavior:'smooth'})">education</a>
-        <a onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">projects</a>
-        <a onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">skills</a>
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
     </nav>
 
     <header>
@@ -218,9 +221,9 @@
     </header>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section data-tab="about" class="section">
         <div class="section-label">about</div>
-        <p>Hey! I am a Mathematics and Computer Science student at the University of Michigan, passionate about applying data and technology to real-world problems — especially at the intersection of finance and tech.</p>
+        <p>Hey! I am a Mathematics and Computer Science student at the University of Michigan, passionate about applying data and technology to real-world problems.</p>
 
         <p>Outside of class, I lead external partnerships at <a href="https://www.michigandataconsulting.org/" target="_blank">Michigan Data Consulting</a> and conduct LLM safety research under Professor Kentaro Toyama.</p>
 
@@ -228,7 +231,7 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section">
+    <section data-tab="experience" class="section">
         <div class="section-label">experience</div>
 
         <div class="exp-item">
@@ -307,7 +310,7 @@
     </section>
 
     <!-- EDUCATION -->
-    <section id="education" class="section">
+    <section data-tab="about" class="section">
         <div class="section-label">education</div>
 
         <div class="edu-block">
@@ -332,7 +335,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <section data-tab="projects" class="section">
         <div class="section-label">projects</div>
 
         <div class="project-item">
@@ -374,7 +377,7 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section">
+    <section data-tab="about" class="section">
         <div class="section-label">skills</div>
         <div class="skills-grid">
             <span class="skill-tag">C++</span>
@@ -428,6 +431,16 @@
         }
 
         typeName();
+
+        const tabs = ["about", "experience", "projects"];
+        function showTab() {
+            const hash = location.hash.slice(1);
+            const tab = tabs.includes(hash) ? hash : "about";
+            document.querySelectorAll("[data-tab]").forEach(s => s.hidden = s.dataset.tab !== tab);
+            document.querySelectorAll("nav a").forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + tab));
+        }
+        window.addEventListener("hashchange", showTab);
+        showTab();
     </script>
 
 </body>
