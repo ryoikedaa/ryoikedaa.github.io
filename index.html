@@ -46,17 +46,10 @@
         header { margin-bottom: 40px; }
 
         header h1 {
-            font-size: 22px;
+            font-size: 44px;
             font-weight: normal;
-            margin-bottom: 4px;
-            min-height: 28px;
-        }
-
-        header h2 {
-            font-size: 13px;
-            font-weight: normal;
-            color: #666;
-            min-height: 20px;
+            line-height: 1.2;
+            min-height: 53px;
         }
 
         .section { margin-bottom: 60px; }
@@ -217,7 +210,6 @@
 
     <header>
         <h1 id="typed-name"></h1>
-        <h2 id="typed-field"></h2>
     </header>
 
     <!-- ABOUT -->
@@ -417,16 +409,6 @@
             if (i < name.length) {
                 nameEl.textContent += name.charAt(i++);
                 setTimeout(typeName, 120);
-            } else { typeField(); }
-        }
-
-        const field = "Mathematics and Computer Science @ University of Michigan";
-        const fieldEl = document.getElementById("typed-field");
-        let j = 0;
-        function typeField() {
-            if (j < field.length) {
-                fieldEl.textContent += field.charAt(j++);
-                setTimeout(typeField, 40);
             }
         }
 
