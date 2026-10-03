@@ -33,7 +33,7 @@
 
         nav {
             display: flex;
-            gap: 20px;
+            gap: 10px;
             font-size: 13px;
         }
 
@@ -50,6 +50,8 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        nav .sep { color: #aaa; }
 
         header { margin-bottom: 40px; }
 
@@ -82,47 +84,15 @@
 
         a:hover { color: #888; }
 
-        .exp-item {
-            margin-bottom: 32px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid #e8e8e8;
-        }
+        .entry { margin-bottom: 24px; }
+        .entry:last-child { margin-bottom: 0; }
+        .entry-title { font-weight: bold; }
 
-        .exp-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 4px;
-            flex-wrap: wrap;
-            gap: 4px;
-        }
-
-        .exp-title { font-size: 15px; font-weight: bold; }
-
-        .exp-date {
-            font-size: 12px;
-            color: #999;
-            white-space: nowrap;
-        }
-
-        .exp-org {
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 8px;
-        }
-
-        .exp-bullets {
-            padding-left: 16px;
+        .entry p {
             font-size: 14px;
             color: #333;
+            margin: 2px 0 0;
         }
-
-        .exp-bullets li { margin-bottom: 5px; }
 
         .edu-block { margin-bottom: 20px; }
         .edu-school { font-weight: bold; font-size: 15px; }
@@ -147,56 +117,6 @@
 
         .course-list li::before { content: "— "; color: #bbb; }
 
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            font-size: 12px;
-            padding: 4px 10px;
-            border: 1px solid #ccc;
-            border-radius: 2px;
-            color: #444;
-        }
-
-        .project-item {
-            margin-bottom: 32px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid #e8e8e8;
-        }
-
-        .project-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 4px;
-            flex-wrap: wrap;
-            gap: 4px;
-        }
-
-        .project-title { font-size: 15px; font-weight: bold; }
-
-        .project-stack {
-            font-size: 12px;
-            color: #999;
-        }
-
-        .project-bullets {
-            padding-left: 16px;
-            font-size: 14px;
-            color: #333;
-            margin-top: 8px;
-        }
-
-        .project-bullets li { margin-bottom: 5px; }
-
         .contact {
             font-size: 12px;
             color: #aaa;
@@ -210,9 +130,10 @@
     <div class="topbar">
         <nav>
             <a href="#about">about</a>
-            <a href="#experience">experience</a>
-            <a href="#projects">projects</a>
-            <a href="#writings">writings</a>
+            <span class="sep">·</span>
+            <a href="#work">work</a>
+            <span class="sep">·</span>
+            <a href="#writing">writing</a>
         </nav>
         <div class="contact">
             <a href="https://linkedin.com/in/ryoikedaa" target="_blank">linkedin</a> · 
@@ -229,90 +150,11 @@
         <div class="section-label">about</div>
         <p>I study math and computer science at the University of Michigan, and most of what I do is driven by curiosity. I like figuring out how things work and thinking about how technology can solve problems that matter to real people.</p>
 
-        <p>Outside of class, I lead external partnerships at <a href="https://www.michigandataconsulting.org/" target="_blank">Michigan Data Consulting</a>.</p>
+        <p>Outside of class, I lead external partnerships at <a href="https://www.michigandataconsulting.org/" target="_blank">Michigan Data Consulting</a> and compete in collegiate Model UN.</p>
 
-        <p>I'm always trying to get better at C++ and writing software, and I'm also a Japanese-English bilingual. I also compete in collegiate Model UN.</p>
+        <p>I'm always trying to get better at C++ and writing software, and I'm also a Japanese-English bilingual.</p>
 
         <p>Reach out at ryoikeda [at] umich [dot] edu.</p>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section data-tab="experience" class="section">
-        <div class="section-label">experience</div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Software Engineering Intern</span>
-                <span class="exp-date">Jun 2026 – Present</span>
-            </div>
-            <div class="exp-org">Efficore · New York, NY</div>
-            <ul class="exp-bullets">
-                <li>Integrated platform APIs to pipeline cross-channel data, orchestrating idempotent upserts across 1,800+ multi-tenant database records, surfacing CTR, ROAS, and spend metrics in a client-facing dashboard that closed the feedback loop between ad delivery and results</li>
-                <li>Operationalized a brand-kit feature including per-brand LoRA fine-tunes on generative models; benchmarked fine-tuned output accuracy against baseline models to validate the pipeline</li>
-                <li>Contributed to an internal context graph tracking creative and strategic decisions to inform future AI-assisted production workflows</li>
-            </ul>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Campus Ambassador</span>
-                <span class="exp-date">May 2026 – Present</span>
-            </div>
-            <div class="exp-org"><a href="https://www.clay.com/" target="_blank">Clay</a> · Ann Arbor, MI</div>
-            <ul class="exp-bullets">
-                <li>Represent Clay on campus, introducing students to the platform through workshops, demos, and technical community events</li>
-                <li>Build relationships between student organizations and the Clay team, relaying campus feedback to inform outreach strategy</li>
-            </ul>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">AI Researcher</span>
-                <span class="exp-date">Jun 2025 – Present</span>
-            </div>
-            <div class="exp-org">University of Michigan College of Engineering · Ann Arbor, MI</div>
-            <ul class="exp-bullets">
-                <li>Designed and executed 400+ controlled LLM dialogue experiments across Gemini, Claude, Copilot, and Replika to evaluate safety, coherence, and factual reliability under faculty supervision (Professor Kentaro Toyama)</li>
-                <li>Analyzed 100+ prompt categories to identify systematic failure modes in safety and reasoning across models; produced comparative analysis report for faculty evaluation leading to future publishing of research paper</li>
-            </ul>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Undergraduate Research Intern</span>
-                <span class="exp-date">May 2025 – Aug 2025</span>
-            </div>
-            <div class="exp-org">Future of Programming Lab, University of Michigan · Ann Arbor, MI</div>
-            <ul class="exp-bullets">
-                <li>Contributed to <em>Hazel</em>, a live functional programming language emphasizing structural editing and type safety</li>
-                <li>Implemented OCaml features within a statically-typed functional language, enforcing invariants in the core type system</li>
-            </ul>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Data Science Intern</span>
-                <span class="exp-date">Jan 2026 – May 2026</span>
-            </div>
-            <div class="exp-org">Michigan Advocacy Program · Ann Arbor, MI</div>
-            <ul class="exp-bullets">
-                <li>Analyzed 4,000 legal cases across 4 datasets using Python (Pandas, Matplotlib) to evaluate impact of a Legal Navigator program on expungement outcomes and client retention; synthesized results and presented data-driven insights to stakeholders</li>
-                <li>Implemented a scalable data pipeline in Python to clean, normalize, and merge multi-source legal datasets; engineered timeline reconstruction and feature extraction logic to quantify intake-to-expungement latency and analyze pre/post-program attrition trends</li>
-            </ul>
-        </div>
-
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Vice President of External Affairs</span>
-                <span class="exp-date">Dec 2025 – Present</span>
-            </div>
-            <div class="exp-org">Michigan Data Consulting · Ann Arbor, MI</div>
-            <ul class="exp-bullets">
-                <li>Led external partnerships with 100+ organizations, driving client acquisition and project pipeline development</li>
-                <li>Developed outreach strategy to match consultants with industry clients, improving project allocation efficiency</li>
-            </ul>
-        </div>
-
     </section>
 
     <!-- EDUCATION -->
@@ -338,77 +180,49 @@
         </div>
     </section>
 
+    <!-- WORK -->
+    <section data-tab="work" class="section">
+        <div class="section-label">work</div>
+
+        <div class="entry">
+            <div class="entry-title">Efficore</div>
+            <p>Software engineering for an AI content platform. I've worked on advertising-data integrations, generative-model workflows, and internal systems for preserving creative context.</p>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">LLM Research @ Michigan</div>
+            <p>I work with Professor Kentaro Toyama studying how conversational AI systems behave across different types of interactions.</p>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">Michigan Data Consulting</div>
+            <p>I lead external partnerships and work with organizations looking to collaborate with student consulting teams.</p>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">Future of Programming Lab</div>
+            <p>I spent a summer contributing to Hazel, a live functional programming language built around structural editing and type safety.</p>
+        </div>
+    </section>
+
     <!-- PROJECTS -->
-    <section data-tab="projects" class="section">
+    <section data-tab="work" class="section">
         <div class="section-label">projects</div>
 
-        <div class="project-item">
-            <div class="project-header">
-                <span class="project-title">SillyQL — Relational Database Engine</span>
-                <span class="exp-date">Mar 2026</span>
-            </div>
-            <div class="project-stack">C++14 · Hash Tables · Red-Black Trees</div>
-            <ul class="project-bullets">
-                <li>Engineered a SQL-like relational database engine in C++14 supporting insert, delete, select, join, and indexing operations via hash table and red-black tree-based storage structures to enable efficient query execution under strict performance constraints</li>
-                <li>Optimized query processing and data access paths using custom comparators and indexing strategies, achieving top-decile runtime performance, executing indexing updates in &lt;15ms across 100K+ transactional rows</li>
-            </ul>
+        <div class="entry">
+            <div class="entry-title">SillyQL</div>
+            <p>A relational database engine I wrote in C++, with indexing, joins, and query execution built from scratch.</p>
         </div>
 
-        <div class="project-item">
-            <div class="project-header">
-                <span class="project-title">Survive.</span>
-                <span class="exp-date">Feb 2026</span>
-            </div>
-            <div class="project-stack">JavaScript · Node.js · Python · HTML/CSS</div>
-            <ul class="project-bullets">
-                <li>Built hybrid parsing pipeline (Python heuristics + LLM integration) to extract and structure 10+ fields from unstructured syllabus PDFs/DOCX, processing 40–60 assignments per semester</li>
-                <li>Developed full-stack system with interactive dashboard for workload visualization and deadline density analysis, enabling automated schedule optimization and .ics export for semester planning</li>
-            </ul>
-        </div>
-
-        <div class="project-item">
-            <div class="project-header">
-                <span class="project-title">Among Us — Heuristic Path Optimization Engine</span>
-                <span class="exp-date">Jan 2026</span>
-            </div>
-            <div class="project-stack">C++ · Graph Theory · Branch-and-Bound</div>
-            <ul class="project-bullets">
-                <li>Designed a branch-and-bound heuristic algorithm for a Traveling Salesman Problem variant, using minimum spanning trees and arbitrary insertion to compute near-optimal tours over coordinate-based maps</li>
-                <li>Applied graph theory and heuristic search to model drone flight-path optimization under real-world routing constraints, balancing tour quality against computation time</li>
-            </ul>
-        </div>
-
-    </section>
-
-    <!-- SKILLS -->
-    <section data-tab="about" class="section">
-        <div class="section-label">skills</div>
-        <div class="skills-grid">
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">HTML / CSS</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Linux</span>
-            <span class="skill-tag">React.js</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">NumPy</span>
-            <span class="skill-tag">Pandas</span>
-            <span class="skill-tag">Matplotlib</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">OpenCV</span>
-        </div>
-        <div style="margin-top: 20px; font-size: 13px; color: #666;">
-            <p><strong>Languages:</strong> English, Japanese (Native) · Spanish (Conversational)</p>
+        <div class="entry">
+            <div class="entry-title">Survive.</div>
+            <p>A tool that turns messy syllabi into structured schedules and helps students understand how their semester will actually feel.</p>
         </div>
     </section>
 
-    <!-- WRITINGS -->
-    <section data-tab="writings" class="section">
-        <div class="section-label">writings</div>
+    <!-- WRITING -->
+    <section data-tab="writing" class="section">
+        <div class="section-label">writing</div>
         <p>Still yet to jot thoughts down.</p>
     </section>
 
@@ -425,7 +239,7 @@
 
         typeName();
 
-        const tabs = ["about", "experience", "projects", "writings"];
+        const tabs = ["about", "work", "writing"];
         function showTab() {
             const hash = location.hash.slice(1);
             const tab = tabs.includes(hash) ? hash : "about";
